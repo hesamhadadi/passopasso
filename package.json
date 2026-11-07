@@ -1,0 +1,40 @@
+{
+  "name": "passopasso",
+  "version": "1.0.0",
+  "description": "An offline student field guide for international university students.",
+  "scripts": {
+    "test": "npm run build && node scripts/smoke.cjs",
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build && node scripts/offline.mjs",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hesamhadadi/passopasso.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/hesamhadadi/passopasso/issues"
+  },
+  "homepage": "https://github.com/hesamhadadi/passopasso#readme",
+  "dependencies": {
+    "idb-keyval": "^6.3.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "autoprefixer": "^10.6.2",
+    "jsdom": "^26.1.0",
+    "postcss": "^8.5.32",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.5"
+  },
+  "private": true
+}

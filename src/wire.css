@@ -1,0 +1,280 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  color: #000;
+  background: #f4f4f4;
+}
+.stage {
+  min-height: 100svh;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  padding: 12px;
+}
+.phone {
+  width: min(375px, calc(100vw - 24px));
+  aspect-ratio: 375/667;
+  position: relative;
+  background: white;
+  border-radius: 20px;
+  container-type: inline-size;
+  isolation: isolate;
+}
+.plate {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: inherit;
+}
+.hit,
+.live {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.hit {
+  background: transparent;
+  border: 0;
+}
+.hit:focus-visible,
+.live:focus-visible,
+button:focus-visible,
+a:focus-visible,
+select:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #3679cb;
+  outline-offset: -3px;
+}
+.live {
+  background: white;
+  font-size: 3.7cqw;
+  line-height: 1.25;
+}
+.quiet {
+  border: 0;
+}
+.chosen {
+  outline: 2px solid black;
+  outline-offset: -2px;
+}
+.native {
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 20px;
+  overflow: auto;
+  background: white;
+  font-size: 3.73cqw;
+}
+.bar {
+  height: 8.7%;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4%;
+  border-bottom: 1px solid black;
+  font-weight: 700;
+  font-size: 4.25cqw;
+}
+.bar button {
+  min-width: 34px;
+  min-height: 40px;
+}
+.body {
+  padding: 6.4%;
+  display: grid;
+  align-content: start;
+  gap: 4.2cqw;
+}
+.body h2 {
+  font-size: 4.8cqw;
+  font-weight: 700;
+}
+.body label {
+  display: grid;
+  gap: 6px;
+  font-size: 3.4cqw;
+  font-weight: bold;
+}
+.body input:not([type="checkbox"]),
+.body select,
+.body textarea,
+.formbox {
+  border: 1px solid black;
+  padding: 3cqw;
+  background: white;
+  width: 100%;
+  font: inherit;
+}
+.body textarea {
+  height: 23cqw;
+  resize: vertical;
+}
+.blk,
+.out,
+.opt {
+  width: 100%;
+  font-weight: 700;
+  min-height: 12.7cqw;
+  padding: 2.5cqw;
+  border: 2px solid black;
+  text-align: center;
+  display: grid;
+  align-content: center;
+}
+.blk {
+  background: black;
+  color: white;
+}
+.out,
+.opt {
+  background: white;
+  color: black;
+}
+.opt {
+  text-align: left;
+  border: 1px solid #d1d5db;
+  font-weight: 400;
+}
+.opt.on {
+  border: 2px solid black;
+  background: #f9fafb;
+  font-weight: 700;
+}
+.fine {
+  font-size: 3.2cqw;
+  line-height: 1.5;
+}
+.label {
+  font-size: 2.7cqw;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.notice {
+  background: #f3f4f6;
+  border-left: 4px solid black;
+  padding: 4cqw;
+}
+.sheetlink {
+  margin-top: 10px;
+  font-size: 11px;
+  color: #545961;
+  text-decoration: underline;
+}
+.scrim {
+  position: absolute;
+  inset: 0;
+  background: #0005;
+  display: grid;
+  place-items: center;
+  border-radius: inherit;
+  z-index: 10;
+}
+.dialog {
+  width: 82%;
+  padding: 6%;
+  background: white;
+  border: 2px solid black;
+  box-shadow: 8px 8px black;
+  display: grid;
+  gap: 14px;
+}
+.dialog h2 {
+  font-size: 17px;
+  font-weight: bold;
+}
+.dialog p {
+  font-size: 14px;
+}
+.dialog button {
+  min-height: 36px;
+  font-size: 13px;
+}
+.sheet {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.sheet img {
+  display: block;
+  width: 100%;
+}
+.sheetnav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  flex-wrap: wrap;
+  background: white;
+  border-bottom: 1px solid #bbb;
+}
+.sheetnav select,
+.sheetnav button {
+  border: 1px solid black;
+  padding: 6px;
+}
+.sr {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.mini {
+  font-size: 2.7cqw;
+  line-height: 1.1;
+}
+.left {
+  justify-content: flex-start;
+}
+.fileview {
+  width: 100%;
+  max-height: 240px;
+  object-fit: contain;
+}
+.thumbimg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.line {
+  border: 1px solid #cbd0d5;
+}
+.under {
+  text-decoration: underline;
+  font-size: 3.4cqw;
+}
+button:disabled {
+  opacity: 0.5;
+}
+@media (max-width: 430px) {
+  .stage {
+    padding: 0;
+    align-content: start;
+    background: white;
+  }
+  .phone {
+    width: 100vw;
+    max-width: 420px;
+  }
+  .sheetlink {
+    margin: 8px 0 16px;
+  }
+}
+@media print {
+  .sheetnav,
+  .sheetlink {
+    display: none;
+  }
+}
